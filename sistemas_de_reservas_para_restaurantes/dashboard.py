@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from clientes import abrir_clientes
-
+from reservas import abrir_reservas
 def abrir_dashboard(admin):
     app = ctk.CTk()
     app.title("Panel de Administración - Restaurante")
@@ -21,9 +21,10 @@ def abrir_dashboard(admin):
 
     # Botón para gestionar reservas (luego lo creamos)
     btn_reservas = ctk.CTkButton(
-        app, text="Gestionar Reservas", width=300, height=50,
-        command=lambda: print("Abrir módulo de reservas")  # temporal
-    )
+    app, text="Gestionar Reservas", width=300, height=50,
+    command=abrir_reservas
+)
+
     btn_reservas.pack(pady=10)
 
     # Botón para salir
